@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="navbar">
+    <h3>MENU</h3>
+    <div class="select">
+      <a  [routerLink]="['/admin']">Home</a>
+    </div>
+    <div class="select">
+      <a [routerLink]="['/admin/registered_users']">Registered Users</a>
+    </div>
+    <div class="select">
+      <a [routerLink]="['/admin/products']">Products</a>
+    </div>
+    <div class="select">
+      <a [routerLink]="['/admin/products_in_cart']">Products in cart</a>
+    </div>
+    <div class="select">
+      <a [routerLink]="['/admin/orderedproducts']">Ordered Products</a>
+    </div>
+    <div class="select">
+      <a [routerLink]="['/admin/shippedproducts']">Shipped Products</a>
+    </div>
+  </div>
+  <div class="home">
+        <div *ngIf="!status" class="briefing">
+          <div class="option" [routerLink]="['admin/registered_users']">
+            <p>registered users</p>
+          </div>
+          <div class="option" [routerLink]="['admin/products']">
+            <p>products</p>
+          </div>
+          <div class="option" [routerLink]="['/admin/products_in_cart']">
+            <p>Products in cart</p>
+          </div>
+          <div class="option" [routerLink]="['admin/orderedproducts']">
+            <p>Orderedproducts</p>
+          </div>
+          <div class="option" [routerLink]="['admin/shippedproducts']">
+            <p>shipped products</p>
+          </div>
+        </div>
+    <router-outlet (activate)="active(true)" (deactivate)="active(false)"></router-outlet>
+  </div>
+</div>

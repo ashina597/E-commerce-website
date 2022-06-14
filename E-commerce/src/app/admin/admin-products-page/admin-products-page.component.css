@@ -1,0 +1,32 @@
+button{
+  width: 100px;
+  height: 35px;
+  margin: 5px;
+  background-color: rgb(2, 2, 49);
+  border: none;
+  color: white;
+}
+
+.products{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+
+.product{
+  background-color: white;
+  width: 220px;
+  height: auto;
+  padding: 10px;
+}
+.product:hover{
+  border: 2px solid black;
+}
+
+img{
+  width: 150px;
+  height: 150px;
+  margin-left: 25px;
+}
+
+

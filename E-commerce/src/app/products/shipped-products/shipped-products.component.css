@@ -1,0 +1,23 @@
+.container{
+  background-color: white;
+  width: 98%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  width: 99%;
+  height: 30px;
+  background-color: rgb(2, 2, 56);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.data{
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}

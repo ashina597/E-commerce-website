@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="product" *ngFor="let product of mycart">
+    <div class="image">
+      <img src="" alt="">
+    </div>
+   <div class="details">
+    <h3>{{product.name}}</h3>
+    <p><b>Brand:</b>{{product.brand}}</p>
+    <p>{{product.price}}</p>
+    <input type="number" placeholder="quantity" [value]="[product.price]"><br>
+    <button type="button" class="remove" (click)="remove(product.product_id)">Remove from cart</button>
+    <button type="button" class="edit" (click)="edit(product.product_id, 1)">Edit cart</button>
+   </div>
+  </div>
+  <button type="button" class="checkout" (click)="checkout()">Checkout</button>
+</div>

@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="filter">
+    <div class="category">
+      <h4 class="title">category</h4>
+      <input type="checkbox" value="home appliances" id="home">
+      <label for="home">Home appliances</label><br>
+      <input type="checkbox" value="office appliances" id="office">
+      <label for="office">Office appliances</label><br>
+      <input type="checkbox" value="food" id="food">
+      <label for="food">Food</label><br>
+      <input type="checkbox" value="clothes" id="clothes">
+      <label for="clothes">clothes</label><br>
+    </div>
+    <!-- <div class="price">
+      <h4 class="title">Price</h4>
+      <label for="from">price range from</label>
+      <input type="number" id="from"><br>
+      <label for="to">price range to</label>
+      <input type="number" id="to">
+
+    </div>
+    <div class="discount">
+      <h4 class="title">Discount</h4>
+      <input type="checkbox" value="10%" id="10%">
+      <label for="10%">up to 10% discount</label><br>
+      <input type="checkbox" value="20%" id="20%">
+      <label for="20%">up to 20% discount</label><br>
+      <input type="checkbox" value="30%" id="30%">
+      <label for="30%">up to 30% discount</label><br>
+      <input type="checkbox" value="40%" id="40%">
+      <label for="40%">up to 40% discount</label><br>
+      <input type="checkbox" value="50%" id="50%">
+      <label for="50%">up to 50% discount</label><br>
+    </div>
+    <div class="shipped">
+      <h4 class="title">Shipped</h4>
+      <input type="checkbox" value="kenya" id="kenya">
+      <label for="kenya">shipped from kenya</label><br>
+      <input type="checkbox" value="abroad" id="abroad">
+      <label for="abroad">shipped from abroad</label><br>
+    </div> -->
+    <!-- <div class="size">
+      <p>size</p>
+      <input type="checkbox" value="small" id="small">
+      <label for="small">Small</label><br>
+      <input type="checkbox" value="medium" id="medium">
+      <label for="medium">Medium</label><br>
+      <input type="checkbox" value="large" id="large">
+      <label for="large">Large</label><br>
+      <input type="checkbox" value="XL" id="XL">
+      <label for="XL">XL</label><br>
+      <input type="checkbox" value="XXL" id="XXL">
+      <label for="XXL">XXL</label><br>
+    </div> -->
+  </div>
+  <div class="shop" *ngIf="!status">
+  <div class="products">
+    <div class="product" *ngFor="let product of products">
+      <div class="image">
+        <img [routerLink]="['/home',product.product_id]" [src]="[product.image]" alt="image">
+      </div>
+      <h4>{{product.name}}</h4>
+      <p>{{product.brand}}</p>
+      <p>{{product.price}}</p>
+      <button class="addtocart" type="button" (click)="addtocart(product.product_id)">Add to cart</button>
+    </div>
+  </div>
+  <div class="nav">
+    <button>Previous</button>
+    <button>1</button>
+    <button>Next</button>
+    </div>
+</div>
+<router-outlet (activate)="active(true)" (deactivate)="active(false)"></router-outlet>
+</div>

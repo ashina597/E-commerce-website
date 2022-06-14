@@ -1,0 +1,55 @@
+.container{
+  width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top{
+  width: 98%;
+  height: auto;
+  background-color: white;
+  display: flex;
+  padding: 10px;
+}
+
+.images{
+  width: 35%;
+  height: auto;
+  padding: 10px;
+}
+
+.data{
+  width: 60%;
+  height: auto;
+  padding: 10px;
+}
+
+.description{
+  width: 98%;
+  height: auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.specification{
+  width: 98%;
+  height: auto;
+  background-color: white;
+  padding: 10px;
+}
+
+button{
+  width: 100px;
+  height: 30px;
+  background-color: rgb(2, 2, 56);
+  color: white;
+  border: none;
+  margin: 2px;
+}
+
+.delete{
+  background-color: red;
+  margin-left: 20px;
+}

@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="!active">
+    <div class="top">
+      <button (click)="addproduct()">Add product</button>
+    </div>
+
+    <div class="shop">
+      <div class="products">
+        <div class="product" *ngFor="let product of products" >
+          <div class="image">
+            <img [src]="[product.image]" alt="image"  [routerLink]="['/admin',product.product_id]">
+          </div>
+          <h4>{{product.name}}</h4>
+          <p>{{product.brand}}</p>
+          <p>{{product.price}}</p>
+          <button (click)="editproduct(product.product_id)">Edit product</button>
+        </div>
+      </div>
+      <div class="nav">
+        <button>Previous</button>
+        <button>1</button>
+        <button>Next</button>
+        </div>
+  </div>
+      <router-outlet (activate)="activate(true)" (deactivate)="activate(false)"></router-outlet>
+  </div>
+</div>

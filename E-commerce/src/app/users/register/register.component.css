@@ -1,0 +1,54 @@
+.form{
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  margin: 50px;
+  background-color: white;
+}
+
+input, select{
+  width: 350px;
+  height: 30px;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+h1{
+  text-align: center;
+}
+
+.container
+{
+  width: 100%;
+  height: auto;
+  background-color: rgb(210, 210, 252);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+  width: 100px;
+  height: 30px;
+  background-color: rgb(2, 2, 56);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 150px;
+}
+
+button:disabled{
+  opacity: 0.5;
+}
+
+.error{
+  color: red;
+}
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+
+select.ng-invalid.ng-touched{
+  border: 2px solid red;
+}

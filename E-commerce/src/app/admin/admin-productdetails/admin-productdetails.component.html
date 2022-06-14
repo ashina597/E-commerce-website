@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="top">
+    <div class="images">
+
+    </div>
+    <div class="data">
+      <h3>{{product.name}}</h3>
+      <p>Brand: {{product.brand}}</p>
+      <p>Price: {{product.price}}</p>
+      <button (click)="editproduct(product.product_id)">Edit product</button>
+      <button class="delete" (click)="deleteproduct(product.product_id)">Delete product</button>
+    </div>
+  </div>
+    <div class="description">
+    <h2>description</h2>
+    <hr>
+    <p>{{product.description}}</p>
+    </div>
+
+    <div class="specification">
+      <h2>Specification</h2>
+      <hr>
+     <p>{{product.specification}}</p>
+    </div>
+</div>
+

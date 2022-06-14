@@ -1,0 +1,59 @@
+<div class="container">
+  <form [formGroup]="form" class="form" (ngSubmit)="signup()">
+    <h1>Sign Up</h1>
+    <hr>
+    <div class="input">
+      <div class="error" *ngIf="form.get('fname')!.invalid && form.get('fname')!.touched">
+        <span *ngIf="form.get('fname')!.errors!['required']">*please fill in your name</span>
+      </div>
+      <input placeholder="First name" type="text" formControlName="fname">
+    </div>
+    <div class="input">
+      <div class="error" *ngIf="form.get('sname')!.invalid && form.get('sname')!.touched">
+        <span *ngIf="form.get('sname')!.errors!['required']">*please fill in your  surname</span>
+      </div>
+      <input placeholder="Surname" type="text" formControlName="sname">
+    </div>
+    <div class="input">
+      <div class="error" *ngIf="form.get('email')!.invalid && form.get('email')!.touched">
+        <span *ngIf="form.get('email')!.errors!['required']">*please fill in your email</span>
+        <span *ngIf="form.get('email')!.errors!['email']">*please fill in a valid email</span>
+      </div>
+      <input placeholder="email" type="email" formControlName="email">
+    </div>
+    <div class="input">
+      <div class="error" *ngIf="form.get('phone_no')!.invalid && form.get('phone_no')!.touched">
+        <span *ngIf="form.get('phone_no')!.errors!['required']">*please fill in your phone number</span>
+        <span class="error" *ngIf="form.get('phone_no')?.errors!['maxlength']">
+          *The Phone number should not be more than 10 digits
+        </span>
+      </div>
+      <input placeholder="Phone number" type="text" formControlName="phone_no">
+    </div>
+    <div class="input">
+      <div class="error" *ngIf="form.get('gender')!.invalid && form.get('gender')!.touched">
+        <span  *ngIf="form.get('gender')?.errors!['required'] || form.get('gender')?.errors!['notAllowed']">
+          *Please select gender
+        </span>
+      </div>
+      <select title="gender" formControlName="gender">
+        <option value="select">--select gender--</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="other">Other</option>
+        <option value="prefer not to say">Prefer not to say</option>
+      </select>
+      </div>
+      <div class="input">
+      <div class="error" *ngIf="form.get('password')!.invalid && form.get('password')!.touched">
+        <span *ngIf="form.get('password')!.errors!['required']">*please set password</span>
+        <span class="error" *ngIf="form.get('password')?.errors!['minlength']">
+          *Your password should have moe that 8
+        </span>
+      </div>
+      <input placeholder="Password" type="password" formControlName="password">
+    </div>
+    <button type="submit" [disabled]="form.invalid || form.value.gender==='select'">Sign Up</button>
+    <p>Already have an account?<a routerLink="/login">Log in</a></p>
+  </form>
+</div>

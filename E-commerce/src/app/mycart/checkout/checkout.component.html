@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="checkout">
+    <h1>Checkout</h1>
+    <div class="table">
+      <table>
+        <th>product name</th>
+        <th>product price</th>
+        <th>quantity</th>
+      </table>
+    </div>
+    <div class="address">
+      <label for="address">Please select your address</label>
+      <select id="address">
+        <option>Nairobi</option>
+        <option>Nyeri</option>
+        <option>Mombasa</option>
+      </select>
+      <label for="destination">Please select your pick up office</label>
+      <select id="destination">
+        <option>Nairobi house</option>
+        <option>Nyeri house</option>
+        <option>Mombasa house</option>
+      </select>
+    </div>
+  <div class="navigation">
+    <button (click)="submit()">Submit Order</button>
+  </div>
+  </div>
+</div>

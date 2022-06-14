@@ -1,0 +1,26 @@
+button{
+  width: 80%;
+  height: 50px;
+  background-color: rgb(2, 2, 56);
+  color: white;
+  border: none;
+  margin: 10px;
+}
+
+.container{
+  width: 99%;
+  height: auto;
+  background-color: rgb(210, 210, 252);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.navigation{
+  display: flex;
+  justify-content: center;
+}
+
+.checkout{
+  background-color: white;
+}

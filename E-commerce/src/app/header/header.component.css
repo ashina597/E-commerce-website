@@ -1,0 +1,35 @@
+.container{
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: rgb(2, 2, 56);
+  color: white;
+}
+
+.name{
+  font-size: 48px;
+}
+
+.motto{
+  font-size: 24px;
+}
+
+.search, .right{
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+input{
+  width: 400px;
+  height: 30px;
+}
+
+button{
+  width: 100px;
+  height: 35px;
+  margin: 5px;
+  background-color: rgb(210, 210, 253);
+  border: none;
+
+}
